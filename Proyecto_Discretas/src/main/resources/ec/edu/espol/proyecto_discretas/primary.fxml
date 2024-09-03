@@ -65,7 +65,7 @@
       </HBox>
       <VBox prefHeight="310.0" prefWidth="811.0" style="-fx-background-color: #d8e1ff;">
          <children>
-            <HBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+            <HBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%,    #2c3b6d,  white);">
                <children>
                   <VBox fx:id="opcionEcuaciones" alignment="CENTER" prefHeight="210.0" prefWidth="152.0" style="-fx-border-width: 2; -fx-border-color: transparent;">
                      <children>

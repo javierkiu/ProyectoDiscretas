@@ -18,7 +18,12 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 /**
  * FXML Controller class
