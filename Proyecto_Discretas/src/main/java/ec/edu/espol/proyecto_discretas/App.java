@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 
@@ -38,14 +39,14 @@ public class App extends Application {
         launch();
     }
     
-    public static Stage cambiarPantalla(String fxml, double n, double m, MouseEvent me) throws IOException {
+    public static Stage cambiarPantalla(String fxml, double ancho, double alto, Event event) throws IOException {
         Stage newScreen = new Stage();
         Parent root = loadFXML(fxml);
-        Scene nuevaScene = new Scene(root, n, m);
-        newScreen.setScene(nuevaScene);
+        Scene newScene = new Scene(root, ancho , alto);
+        newScreen.setScene(newScene);
         newScreen.setResizable(false);
         newScreen.show();
-        Stage stage = (Stage) ((Node) me.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
         return newScreen;
     }

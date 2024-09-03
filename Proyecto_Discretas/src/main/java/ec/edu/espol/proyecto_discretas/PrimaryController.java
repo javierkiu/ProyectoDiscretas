@@ -14,9 +14,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 /**
  * FXML Controller class
@@ -25,12 +27,33 @@ import javafx.stage.Stage;
  */
 public class PrimaryController implements Initializable {
 
+    @FXML
+    private VBox opcionEcuaciones;
+    @FXML
+    private Button buttonEcuaciones;
+    @FXML
+    private Button buttonJuego;
+    @FXML
+    private Button buttonCalcular;
+    @FXML
+    private VBox opcionjuego;
+    @FXML
+    private VBox opcionCalcular;
+    
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        opcionEcuaciones.setOnMouseEntered(event -> buttonEcuaciones.setStyle("-fx-background-color:  #1f2a4f; -fx-text-fill: white;"));
+        opcionEcuaciones.setOnMouseExited(event -> buttonEcuaciones.setStyle("-fx-background-color: white;-fx-text-fill: black;"));
+        opcionjuego.setOnMouseEntered(event -> buttonJuego.setStyle("-fx-background-color:  #1f2a4f; -fx-text-fill: white;"));
+        opcionjuego.setOnMouseExited(event -> buttonJuego.setStyle("-fx-background-color: white;-fx-text-fill: black;"));        
+        opcionCalcular.setOnMouseEntered(event -> buttonCalcular.setStyle("-fx-background-color:  #1f2a4f; -fx-text-fill: white;"));
+        opcionCalcular.setOnMouseExited(event -> buttonCalcular.setStyle("-fx-background-color: white;-fx-text-fill: black;"));
+
     }    
     
     @FXML
