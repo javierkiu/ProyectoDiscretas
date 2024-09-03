@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 
 /**
  * JavaFX App
@@ -17,7 +19,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        stage.setResizable(false);
+        scene = new Scene(loadFXML("primary"), 1000, 600);
         stage.setScene(scene);
         stage.show();
     }
@@ -34,5 +37,16 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
+    
+    public static Stage cambiarPantalla(String fxml, double n, double m, MouseEvent me) throws IOException {
+        Stage newScreen = new Stage();
+        Parent root = loadFXML(fxml);
+        Scene nuevaScene = new Scene(root, n, m);
+        newScreen.setScene(nuevaScene);
+        newScreen.setResizable(false);
+        newScreen.show();
+        Stage stage = (Stage) ((Node) me.getSource()).getScene().getWindow();
+        stage.close();
+        return newScreen;
+    }
 }

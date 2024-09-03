@@ -1,12 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
 package ec.edu.espol.proyecto_discretas;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.input.MouseButton;
 
-public class PrimaryController {
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+/**
+ * FXML Controller class
+ *
+ * @author JAVIER
+ */
+public class PrimaryController implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+    
+    @FXML
+    private void goToEcuaciones(MouseEvent event) throws IOException {
+        App.cambiarPantalla("ecuaciones", 1000, 600,event);
+  
+    }
+
 
     @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+    private void goToGame(MouseEvent event) throws IOException {
+        App.cambiarPantalla("juego", 1000, 600,event);
+ 
     }
+
+
+    @FXML
+    private void goToCalculate(MouseEvent event) throws IOException {
+        App.cambiarPantalla("calcular", 1000, 600,event);
+
+    }
+
+
 }

@@ -1,16 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.PrimaryController">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #d8e1ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.PrimaryController">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <HBox alignment="CENTER" prefHeight="104.0" prefWidth="975.0" style="-fx-background-color: #1f2a4f;">
+         <children>
+            <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../../img/logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Interés compuesto" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="252.0" prefWidth="1000.0" style="-fx-background-color: #2c3b6d;">
+         <children>
+            <HBox prefHeight="186.0" prefWidth="773.0">
+               <children>
+                  <VBox prefHeight="186.0" prefWidth="800.0">
+                     <children>
+                        <Label prefHeight="121.0" prefWidth="793.0" text="Interés compuesto y la importancia de las relaciones de recurrencia" textFill="WHITE" wrapText="true">
+                           <padding>
+                              <Insets bottom="20.0" left="30.0" right="20.0" top="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="83.0" prefWidth="774.0" text="Deducción y análisis de todas las ecuaciones que intervienen en una tabla de amortización francesa al realizar un préstamo bancario." textFill="WHITE" wrapText="true">
+                           <padding>
+                              <Insets bottom="20.0" left="30.0" right="20.0" />
+                           </padding>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="150.0" fitWidth="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/recurrencia.png" />
+               </image></ImageView>
+         </children>
+      </HBox>
+      <VBox prefHeight="310.0" prefWidth="811.0" style="-fx-background-color: #d8e1ff;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="210.0" prefWidth="152.0">
+                     <children>
+                        <ImageView fitHeight="152.0" fitWidth="182.0" onMouseClicked="#goToEcuaciones" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/ecuaciones.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onMouseClicked="#goToEcuaciones" prefHeight="20.0" prefWidth="152.0" style="-fx-background-color: white;" text="Ecuaciones">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="206.0" prefWidth="149.0">
+                     <children>
+                        <ImageView fitHeight="152.0" fitWidth="182.0" onMouseClicked="#goToGame" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/play.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onMouseClicked="#goToGame" prefHeight="20.0" prefWidth="152.0" style="-fx-background-color: white;" text="Iniciar Juego">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="230.0" prefWidth="152.0">
+                     <children>
+                        <ImageView fitHeight="152.0" fitWidth="182.0" onMouseClicked="#goToCalculate" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/stadistics.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onMouseClicked="#goToCalculate" prefHeight="20.0" prefWidth="152.0" style="-fx-background-color: white;" text="Calcular">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></VBox>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
 </VBox>
