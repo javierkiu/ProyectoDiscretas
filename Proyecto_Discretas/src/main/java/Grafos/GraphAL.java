@@ -9,9 +9,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
-/*
- * Profesora: Adriana Collaguazo Jaramillo
- */
+
 public class GraphAL<V, E> {  // V vértice caracteriza si son Personas, E caracteriza la información de los Arcos
    private LinkedList<Vertex<V, E>> vertices; // Lista de la clase Vertex, sera un vértice que almacene a una Persona
    private boolean isDirected;

@@ -2,10 +2,7 @@ package Grafos;
 
 import java.util.LinkedList;
 
-/**
- *
- * Profesora: Adriana Collaguazo Jaramillo
- */
+
 class Vertex<V, E> { // La clase Vertex tendra en el parametro V información como Persona y el parametro E información del Arco. 
     private V content; // guarda el valor de 4 - parametro V se usa para definir el origen y destino
     private LinkedList<Edge<E, V>> edges; // Que tipo de dato almacena esta colección seria de tipo Arcos

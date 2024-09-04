@@ -1,13 +1,17 @@
 package ec.edu.espol.proyecto_discretas;
 
+import Grafos.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javafx.scene.input.MouseEvent;
 
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -15,6 +19,8 @@ import javafx.fxml.Initializable;
  * @author JAVIER
  */
 public class JuegoController implements Initializable {
+
+
 
     /**
      * Initializes the controller class.
@@ -28,5 +34,7 @@ public class JuegoController implements Initializable {
     private void volver(MouseEvent event) throws IOException {
         App.cambiarPantalla("primary", 1000, 600, event);
     }
+
+
 
 }
