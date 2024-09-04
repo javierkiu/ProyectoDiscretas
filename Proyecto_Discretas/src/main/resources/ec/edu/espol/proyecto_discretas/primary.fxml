@@ -13,7 +13,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="104.0" prefWidth="975.0" style="-fx-background-color: #1f2a4f;">
          <children>
-            <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="56.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -21,7 +21,7 @@
                   <Image url="@../../../../img/logo.png" />
                </image>
             </ImageView>
-            <Label text="Interés compuesto" textFill="WHITE">
+            <Label text="El problema del agente viajero" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -34,7 +34,7 @@
                <children>
                   <VBox prefHeight="186.0" prefWidth="800.0">
                      <children>
-                        <Label prefHeight="121.0" prefWidth="793.0" text="Interés compuesto y la importancia de las relaciones de recurrencia" textFill="WHITE" wrapText="true">
+                        <Label prefHeight="121.0" prefWidth="793.0" text="El problema del agente viajero y algoritmo de la ruta más corta" textFill="WHITE" wrapText="true">
                            <padding>
                               <Insets bottom="20.0" left="30.0" right="20.0" top="20.0" />
                            </padding>
@@ -42,7 +42,7 @@
                               <Font name="System Bold" size="25.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="83.0" prefWidth="774.0" text="Deducción y análisis de todas las ecuaciones que intervienen en una tabla de amortización francesa al realizar un préstamo bancario." textFill="WHITE" wrapText="true">
+                        <Label prefHeight="83.0" prefWidth="774.0" text="Aplicación de grafos y algoritmos para encontrar la ruta más corta posible" textFill="WHITE" wrapText="true">
                            <padding>
                               <Insets bottom="20.0" left="30.0" right="20.0" />
                            </padding>
@@ -74,7 +74,7 @@
                               <Image url="@../../../../img/ecuaciones.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="buttonEcuaciones" mnemonicParsing="false" onMouseClicked="#goToEcuaciones" prefHeight="20.0" prefWidth="152.0" style="-fx-background-color: white; -fx-text-fill: #000000;" text="Ecuaciones">
+                        <Button fx:id="buttonEcuaciones" mnemonicParsing="false" onMouseClicked="#goToEcuaciones" prefHeight="20.0" prefWidth="152.0" style="-fx-background-color: white; -fx-text-fill: #000000;" text="Explicación">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
