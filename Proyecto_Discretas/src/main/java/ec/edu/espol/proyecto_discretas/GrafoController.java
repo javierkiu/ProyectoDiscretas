@@ -12,9 +12,9 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author JAVIER
+ * @author Steven Mirabá
  */
-public class JuegoController implements Initializable {
+public class GrafoController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -22,16 +22,11 @@ public class JuegoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+   
     @FXML
     private void volver(MouseEvent event) throws IOException {
         App.cambiarPantalla("primary", 1000, 600, event);
     }
     
-    @FXML
-    private void cambiarGrafo(MouseEvent event) throws IOException {
-        App.cambiarPantalla("grafo", 1000, 600, event);
-    }
-
 }
