@@ -9,16 +9,16 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #A0A0A0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.JuegoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.JuegoController">
    <children>
-      <Pane prefHeight="134.0" prefWidth="1000.0">
+      <Pane prefHeight="134.0" prefWidth="1000.0" style="-fx-background-color: #1f2a4f;">
          <children>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="322.0" layoutY="35.0" text="La carrera empieza en Caracas - Venezuela" textFill="WHITE">
+            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="322.0" layoutY="30.0" text="La carrera empieza en Caracas - Venezuela" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <ImageView fitHeight="63.0" fitWidth="68.0" onMouseClicked="#volver" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="63.0" fitWidth="68.0" layoutX="5.0" onMouseClicked="#volver" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../img/retroceder.png" />
                </image>
@@ -60,7 +60,7 @@
             <Line endX="-222.5858154296875" endY="-91.0" layoutX="750.0" layoutY="257.0" startX="-322.79998779296875" startY="-40.39997863769531" />
             <Line endX="-227.29290771484375" endY="60.7071533203125" layoutX="722.0" layoutY="286.0" startX="-294.79998779296875" startY="-69.19999694824219" />
             <Line endX="-217.0928955078125" endY="-68.10711669921875" layoutX="725.0" layoutY="347.0" startX="-297.79998779296875" startY="-130.1999969482422" />
-            <ImageView fitHeight="52.0" fitWidth="228.0" onMouseClicked="#cambiarGrafo" layoutX="646.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="52.0" fitWidth="228.0" layoutX="646.0" layoutY="429.0" onMouseClicked="#cambiarGrafo" pickOnBounds="true" preserveRatio="true">
                 <image>
                    <Image url="@../../../../img/texto.png" />
                </image>

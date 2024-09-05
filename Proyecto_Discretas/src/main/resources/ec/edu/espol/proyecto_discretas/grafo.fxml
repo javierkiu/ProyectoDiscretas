@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #B0B0B0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.GrafoController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.GrafoController">
    <children>
         <ImageView fitHeight="63.0" fitWidth="68.0" onMouseClicked="#volver" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -69,66 +69,61 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="272.0" layoutY="102.0" text="COL" textFill="#1f2a4f">
+      <Label layoutX="250.0" layoutY="110.0" text="COL" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="697.0" layoutY="102.0" text="BRA" textFill="#1f2a4f">
+      <Label layoutX="724.0" layoutY="110.0" text="BRA" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="174.0" layoutY="198.0" text="ECU" textFill="#1f2a4f">
+      <Label layoutX="142.0" layoutY="212.0" text="ECU" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="272.0" layoutY="443.0" text="CHI" textFill="#1f2a4f">
+      <Label layoutX="251.0" layoutY="482.0" text="CHI" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="793.0" layoutY="198.0" text="BOL" textFill="#1f2a4f">
+      <Label layoutX="818.0" layoutY="208.0" text="BOL" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Line endX="-185.50001525878906" endY="35.0" layoutX="373.0" layoutY="324.0" startX="-185.50001525878906" startY="-77.70826721191406" stroke="WHITE" strokeWidth="3.0" />
-      <Label layoutX="174.0" layoutY="340.0" text="PER" textFill="#1f2a4f">
+      <Line endX="-185.50001525878906" endY="35.0" layoutX="373.0" layoutY="324.0" startX="-185.50001525878906" startY="-77.70826721191406" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Label layoutX="146.0" layoutY="369.0" text="PER" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Line endX="-124.56788635253906" endY="-15.000015258789062" layoutX="321.0" layoutY="234.0" startX="-47.0" startY="-88.00001525878906" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="-44.0" endY="-59.354122161865234" layoutX="529.0" layoutY="123.0" startX="-231.0" startY="6.1999969482421875" stroke="#fcfcfc" strokeWidth="3.0" />
-      <Line endX="81.0" endY="66.0" fill="WHITE" layoutX="615.0" layoutY="63.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="132.00006103515625" endY="-28.000015258789062" layoutX="660.0" layoutY="249.0" startX="59.60003662109375" startY="-101.80000305175781" stroke="#fcfcfc" strokeWidth="3.0" />
-      <Line endX="7.50006103515625" endY="-42.70826721191406" layoutX="798.0" layoutY="289.0" startX="7.80645751953125" startY="70.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="-48.0" endY="60.4000244140625" layoutX="319.0" layoutY="410.0" startX="-130.50001525878906" startY="-21.708251953125" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="48.0" endY="68.6458740234375" layoutX="438.0" layoutY="502.0" startX="-144.0" startY="-16.20001220703125" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="80.0" endY="-87.0" layoutX="615.0" layoutY="571.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="-60.5" endY="-258.708251953125" layoutX="770.0" layoutY="409.0" startX="-60.5" startY="53.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="270.0" endY="-110.3541259765625" layoutX="425.0" layoutY="246.0" startX="-126.0" startY="-110.3541259765625" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="-75.5" endY="-116.70826721191406" layoutX="361.0" layoutY="265.0" startX="-164.00001525878906" startY="98.60000610351562" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="305.0" endY="-186.8000030517578" layoutX="392.0" layoutY="330.0" startX="-190.00001525878906" startY="36.4000244140625" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#fcfcfc" strokeWidth="3.0" />
-      <Line endX="344.39996337890625" endY="-211.00001525878906" layoutX="453.0" layoutY="452.0" startX="-157.20001220703125" startY="17.60003662109375" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="237.10699462890625" endY="-201.70713806152344" layoutX="561.0" layoutY="442.0" startX="-60.5" startY="114.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="-10.89300537109375" endY="215.60000610351562" layoutX="810.0" layoutY="148.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
-      <Line endX="110.50006103515625" endY="-20.708251953125" layoutX="695.0" layoutY="409.0" startX="-195.20709228515625" startY="147.70709228515625" stroke="WHITE" strokeWidth="3.0" />
-      <Label layoutX="696.0" layoutY="443.0" text="URU" textFill="#1f2a4f">
+      <Line endX="-124.56788635253906" endY="-15.000015258789062" layoutX="321.0" layoutY="234.0" startX="-47.0" startY="-88.00001525878906" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="-44.0" endY="-59.354122161865234" layoutX="529.0" layoutY="123.0" startX="-231.0" startY="6.1999969482421875" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="81.0" endY="66.0" fill="WHITE" layoutX="615.0" layoutY="63.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="132.00006103515625" endY="-28.000015258789062" layoutX="660.0" layoutY="249.0" startX="59.60003662109375" startY="-101.80000305175781" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="7.50006103515625" endY="-42.70826721191406" layoutX="798.0" layoutY="289.0" startX="7.80645751953125" startY="70.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="-48.0" endY="60.4000244140625" layoutX="319.0" layoutY="410.0" startX="-130.50001525878906" startY="-21.708251953125" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="48.0" endY="68.6458740234375" layoutX="438.0" layoutY="502.0" startX="-144.0" startY="-16.20001220703125" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="80.0" endY="-87.0" layoutX="615.0" layoutY="571.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="-60.5" endY="-258.708251953125" layoutX="770.0" layoutY="409.0" startX="-60.5" startY="53.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="270.0" endY="-110.3541259765625" layoutX="425.0" layoutY="246.0" startX="-126.0" startY="-110.3541259765625" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="-75.5" endY="-116.70826721191406" layoutX="361.0" layoutY="265.0" startX="-164.00001525878906" startY="98.60000610351562" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="305.0" endY="-186.8000030517578" layoutX="392.0" layoutY="330.0" startX="-190.00001525878906" startY="36.4000244140625" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="344.39996337890625" endY="-211.00001525878906" layoutX="453.0" layoutY="452.0" startX="-157.20001220703125" startY="17.60003662109375" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="237.10699462890625" endY="-201.70713806152344" layoutX="561.0" layoutY="442.0" startX="-60.5" startY="114.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="-10.89300537109375" endY="215.60000610351562" layoutX="810.0" layoutY="148.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line endX="110.50006103515625" endY="-20.708251953125" layoutX="695.0" layoutY="409.0" startX="-195.20709228515625" startY="147.70709228515625" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Label layoutX="723.0" layoutY="482.0" text="URU" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Line endX="162.0" endY="-90.20826721191406" layoutX="547.0" layoutY="240.0" startX="-45.565185546875" startY="316.0" stroke="WHITE" strokeWidth="3.0" />
-      <Label layoutX="488.0" layoutY="537.0" text="ARG" textFill="#1f2a4f">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="793.0" layoutY="340.0" text="PAR" textFill="#1f2a4f">
+      <Line endX="162.0" endY="-90.20826721191406" layoutX="547.0" layoutY="240.0" startX="-45.565185546875" startY="316.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Label layoutX="822.0" layoutY="368.0" text="PAR" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -221,6 +216,11 @@
       <Label layoutX="712.0" layoutY="359.0" text="2770" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="487.0" layoutY="581.0" text="ARG" textFill="#1f2a4f">
+         <font>
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
    </children>
