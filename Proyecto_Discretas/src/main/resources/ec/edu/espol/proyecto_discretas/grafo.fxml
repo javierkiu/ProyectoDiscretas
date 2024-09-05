@@ -4,6 +4,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -19,7 +20,7 @@
                 <Image url="@../../../../img/vertice.png" />
             </image>
         </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="270.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="vecCOL" fitHeight="32.0" fitWidth="29.0" layoutX="270.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/vertice.png" />
          </image>
@@ -54,7 +55,7 @@
             <Image url="@../../../../img/vertice.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="486.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="vecARG" fitHeight="32.0" fitWidth="29.0" layoutX="486.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/vertice.png" />
          </image>
@@ -94,35 +95,35 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Line endX="-185.50001525878906" endY="35.0" layoutX="373.0" layoutY="324.0" startX="-185.50001525878906" startY="-77.70826721191406" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineEcuPer" endX="-185.50001525878906" endY="35.0" layoutX="373.0" layoutY="324.0" startX="-185.50001525878906" startY="-77.70826721191406" stroke="#1f2a4f" strokeWidth="3.0" />
       <Label layoutX="146.0" layoutY="369.0" text="PER" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Line endX="-124.56788635253906" endY="-15.000015258789062" layoutX="321.0" layoutY="234.0" startX="-47.0" startY="-88.00001525878906" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="-44.0" endY="-59.354122161865234" layoutX="529.0" layoutY="123.0" startX="-231.0" startY="6.1999969482421875" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="81.0" endY="66.0" fill="WHITE" layoutX="615.0" layoutY="63.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="132.00006103515625" endY="-28.000015258789062" layoutX="660.0" layoutY="249.0" startX="59.60003662109375" startY="-101.80000305175781" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="7.50006103515625" endY="-42.70826721191406" layoutX="798.0" layoutY="289.0" startX="7.80645751953125" startY="70.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="-48.0" endY="60.4000244140625" layoutX="319.0" layoutY="410.0" startX="-130.50001525878906" startY="-21.708251953125" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="48.0" endY="68.6458740234375" layoutX="438.0" layoutY="502.0" startX="-144.0" startY="-16.20001220703125" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="80.0" endY="-87.0" layoutX="615.0" layoutY="571.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="-60.5" endY="-258.708251953125" layoutX="770.0" layoutY="409.0" startX="-60.5" startY="53.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="270.0" endY="-110.3541259765625" layoutX="425.0" layoutY="246.0" startX="-126.0" startY="-110.3541259765625" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="-75.5" endY="-116.70826721191406" layoutX="361.0" layoutY="265.0" startX="-164.00001525878906" startY="98.60000610351562" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="305.0" endY="-186.8000030517578" layoutX="392.0" layoutY="330.0" startX="-190.00001525878906" startY="36.4000244140625" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="344.39996337890625" endY="-211.00001525878906" layoutX="453.0" layoutY="452.0" startX="-157.20001220703125" startY="17.60003662109375" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="237.10699462890625" endY="-201.70713806152344" layoutX="561.0" layoutY="442.0" startX="-60.5" startY="114.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="-10.89300537109375" endY="215.60000610351562" layoutX="810.0" layoutY="148.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line endX="110.50006103515625" endY="-20.708251953125" layoutX="695.0" layoutY="409.0" startX="-195.20709228515625" startY="147.70709228515625" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineEcuCol" endX="-124.56788635253906" endY="-15.000015258789062" layoutX="321.0" layoutY="234.0" startX="-47.0" startY="-88.00001525878906" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineVenCol" endX="-44.0" endY="-59.354122161865234" layoutX="529.0" layoutY="123.0" startX="-231.0" startY="6.1999969482421875" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineVenBra" endX="81.0" endY="66.0" fill="WHITE" layoutX="615.0" layoutY="63.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineBraBol" endX="132.00006103515625" endY="-28.000015258789062" layoutX="660.0" layoutY="249.0" startX="59.60003662109375" startY="-101.80000305175781" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineBolPar" endX="7.50006103515625" endY="-42.70826721191406" layoutX="798.0" layoutY="289.0" startX="7.80645751953125" startY="70.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="linePerChi" endX="-48.0" endY="60.4000244140625" layoutX="319.0" layoutY="410.0" startX="-130.50001525878906" startY="-21.708251953125" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineChiArg" endX="48.0" endY="68.6458740234375" layoutX="438.0" layoutY="502.0" startX="-144.0" startY="-16.20001220703125" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineUruArg" endX="80.0" endY="-87.0" layoutX="615.0" layoutY="571.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineUruBra" endX="-60.5" endY="-258.708251953125" layoutX="770.0" layoutY="409.0" startX="-60.5" startY="53.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineColBra" endX="270.0" endY="-110.3541259765625" layoutX="425.0" layoutY="246.0" startX="-126.0" startY="-110.3541259765625" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineColPer" endX="-75.5" endY="-116.70826721191406" layoutX="361.0" layoutY="265.0" startX="-164.00001525878906" startY="98.60000610351562" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="linePerBra" endX="305.0" endY="-186.8000030517578" layoutX="392.0" layoutY="330.0" startX="-190.00001525878906" startY="36.4000244140625" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="linePerBol" endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineChiBol" endX="344.39996337890625" endY="-211.00001525878906" layoutX="453.0" layoutY="452.0" startX="-157.20001220703125" startY="17.60003662109375" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineArgBol" endX="237.10699462890625" endY="-201.70713806152344" layoutX="561.0" layoutY="442.0" startX="-60.5" startY="114.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineParBra" endX="-10.89300537109375" endY="215.60000610351562" layoutX="810.0" layoutY="148.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineParArg" endX="110.50006103515625" endY="-20.708251953125" layoutX="695.0" layoutY="409.0" startX="-195.20709228515625" startY="147.70709228515625" stroke="#1f2a4f" strokeWidth="3.0" />
       <Label layoutX="723.0" layoutY="482.0" text="URU" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Line endX="162.0" endY="-90.20826721191406" layoutX="547.0" layoutY="240.0" startX="-45.565185546875" startY="316.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Line fx:id="lineArgBra" endX="162.0" endY="-90.20826721191406" layoutX="547.0" layoutY="240.0" startX="-45.565185546875" startY="316.0" stroke="#1f2a4f" strokeWidth="3.0" />
       <Label layoutX="822.0" layoutY="368.0" text="PAR" textFill="#1f2a4f">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -223,5 +224,15 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <Circle fx:id="vecVEN" fill="#1f93ff00" layoutX="501.0" layoutY="61.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecBRA" fill="#1f93ff00" layoutX="710.0" layoutY="136.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecBOL" fill="#1f93ff00" layoutX="806.0" layoutY="232.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecPAR" fill="#1f93ff00" layoutX="805.0" layoutY="374.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecURU" fill="#1f93ff00" layoutX="710.0" layoutY="476.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecCHI" fill="#1f93ff00" layoutX="284.0" layoutY="476.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecPER" fill="#1f93ff00" layoutX="187.0" layoutY="374.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecECU" fill="#1f93ff00" layoutX="187.0" layoutY="232.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecCO" fill="#1f93ff00" layoutX="285.0" layoutY="136.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
+      <Circle fx:id="vecAR" fill="#1f93ff00" layoutX="501.0" layoutY="571.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
    </children>
 </Pane>
