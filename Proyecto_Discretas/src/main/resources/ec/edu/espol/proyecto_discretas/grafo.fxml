@@ -6,16 +6,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <Pane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.GrafoController">
    <children>
-      <ImageView fx:id="imgAlg" fitHeight="51.0" fitWidth="235.0" layoutX="1046.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-                  <Image url="@../../../../img/textD.png" />
-               </image>
-            </ImageView>
         <ImageView fitHeight="63.0" fitWidth="68.0" onMouseClicked="#volver" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../img/retroceder.png" />
@@ -264,125 +258,12 @@
             <Image url="@../../../../img/dijkstra.png" />
          </image>
       </ImageView>
-      <Pane fx:id="paneDijkstra" layoutX="929.0" layoutY="82.0" prefHeight="573.0" prefWidth="342.0">
-         <children>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="157.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="58.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="252.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="14.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="102.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="204.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="299.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="57.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="145.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="299.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../img/vertice.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="159.0" layoutY="18.0" text="VEN" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="60.0" layoutY="96.0" text="BOG" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="254.0" layoutY="96.0" text="BRA" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Line endX="14.5" endY="-90.708251953125" layoutX="157.0" layoutY="157.0" startX="-84.5" startY="-42.0" />
-            <Line endX="5.2071533203125" endY="-101.41537475585938" layoutX="167.0" layoutY="167.0" startX="99.5" startY="-52.0" />
-            <Line endX="-94.5" endY="-22.708251953125" layoutX="167.0" layoutY="166.0" startX="-139.20001220703125" startY="30.399993896484375" />
-            <Line endX="-103.79290771484375" endY="-33.415374755859375" layoutX="177.0" layoutY="176.0" startX="-61.06982421875" startY="19.0" />
-            <Line endX="-94.5" endY="-22.708251953125" layoutX="360.0" layoutY="165.0" startX="-139.20001220703125" startY="30.399993896484375" />
-            <Line endX="-103.79290771484375" endY="-33.415374755859375" layoutX="372.0" layoutY="176.0" startX="-61.06982421875" startY="19.0" />
-            <Line endX="-94.5" endY="-22.708251953125" layoutX="211.0" layoutY="248.0" startX="-139.20001220703125" startY="30.399993896484375" />
-            <Line endX="-103.79290771484375" endY="-33.415374755859375" layoutX="221.0" layoutY="257.0" startX="-61.06982421875" startY="19.0" />
-            <Line endX="61.93017578125" endY="27.0" layoutX="252.0" layoutY="267.0" startX="61.5" startY="-42.708251953125" />
-            <Label layoutX="103.0" layoutY="176.0" text="PER" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="205.0" layoutY="176.0" text="PAR" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="301.0" layoutY="176.0" text="ARG" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="301.0" layoutY="275.0" text="URU" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="148.0" layoutY="262.0" text="BOL" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="60.0" layoutY="262.0" text="CHI" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="16.0" layoutY="176.0" text="ECU" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Rectangle fx:id="recDis" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="-33.0" layoutY="-83.0" stroke="WHITE" strokeType="INSIDE" width="399.0" />
-         </children>
-      </Pane>
       <ImageView fitHeight="29.0" fitWidth="93.0" layoutX="715.0" layoutY="569.0" onMouseClicked="#reset" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../img/reset.png" />
             </image>
       </ImageView>
       <Line fx:id="linePerBol" endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
+      <Pane fx:id="paneGrafo" layoutX="851.0" layoutY="1.0" prefHeight="600.0" prefWidth="431.0" />
    </children>
 </Pane>

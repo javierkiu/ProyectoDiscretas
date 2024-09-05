@@ -8,22 +8,8 @@ import java.util.List;
  * @author Steven Mirabá
  */
 public class BruteForceTSPAlgorithm {
-    // Matriz de distancias
     private int[][] distancias;
-    /*= {
-        {0, 1023, 0, 0, 0, 0, 0, 0, 0, 3597},
-        {1023, 0, 734, 1885, 0, 0, 0, 0, 0, 2666},
-        {0, 734, 0, 1324, 0, 0, 0, 0, 0, 0},
-        {0, 1885, 1324, 0, 2466, 0, 1077, 0, 0, 3171},
-        {0, 0, 0, 2466, 0, 1138, 1900, 0, 0, 0},
-        {0, 0, 0, 0, 1138, 0, 2237, 1040, 202, 2340},
-        {0, 0, 0, 1077, 1900, 2237, 0, 1464, 0, 2165},
-        {0, 0, 0, 0, 0, 1040, 1464, 0, 0, 1463},
-        {0, 0, 0, 0, 0, 202, 0, 0, 0, 2770},
-        {3597, 2666, 0, 3171, 0, 2340, 2165, 1463, 2770, 0}
-    };*/
-
-    // Número de vértices
+    
     public BruteForceTSPAlgorithm(int[][] distancias) {
         this.distancias = distancias;
     }
