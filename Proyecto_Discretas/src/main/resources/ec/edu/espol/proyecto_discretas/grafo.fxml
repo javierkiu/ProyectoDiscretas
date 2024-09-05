@@ -128,92 +128,92 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="364.0" layoutY="76.0" text="1023" textFill="WHITE">
+      <Label layoutX="364.0" layoutY="76.0" text="1023" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="592.0" layoutY="74.0" text="3597" textFill="WHITE">
+      <Label layoutX="592.0" layoutY="74.0" text="3597" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="754.0" layoutY="164.0" text="2165" textFill="WHITE">
+      <Label layoutX="754.0" layoutY="164.0" text="2165" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="219.0" layoutY="161.0" text="734" textFill="WHITE">
+      <Label layoutX="219.0" layoutY="161.0" text="734" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="154.0" layoutY="281.0" text="1324" textFill="WHITE">
+      <Label layoutX="154.0" layoutY="281.0" text="1324" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="201.0" layoutY="428.0" text="2466" textFill="WHITE">
+      <Label layoutX="201.0" layoutY="428.0" text="2466" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="360.0" layoutY="527.0" text="1138" textFill="WHITE">
+      <Label layoutX="360.0" layoutY="527.0" text="1138" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="497.0" layoutY="349.0" text="1900" textFill="WHITE">
+      <Label layoutX="497.0" layoutY="349.0" text="1900" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="473.0" layoutY="281.0" text="1077" textFill="WHITE">
+      <Label layoutX="473.0" layoutY="281.0" text="1077" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="433.0" layoutY="233.0" text="3171" textFill="WHITE">
+      <Label layoutX="433.0" layoutY="233.0" text="3171" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="599.0" layoutY="288.0" text="2340" textFill="WHITE">
+      <Label layoutX="599.0" layoutY="288.0" text="2340" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="646.0" layoutY="354.0" text="2237" textFill="WHITE">
+      <Label layoutX="646.0" layoutY="354.0" text="2237" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="606.0" layoutY="524.0" text="202" textFill="WHITE">
+      <Label layoutX="606.0" layoutY="524.0" text="202" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="658.0" layoutY="438.0" text="1040" textFill="WHITE">
+      <Label layoutX="658.0" layoutY="438.0" text="1040" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="488.0" layoutY="119.0" text="2666" textFill="WHITE">
+      <Label layoutX="488.0" layoutY="119.0" text="2666" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="248.0" layoutY="239.0" text="1885" textFill="WHITE">
+      <Label layoutX="248.0" layoutY="239.0" text="1885" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="743.0" layoutY="212.0" text="1463" textFill="WHITE">
+      <Label layoutX="743.0" layoutY="212.0" text="1463" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="712.0" layoutY="359.0" text="2770" textFill="WHITE">
+      <Label layoutX="712.0" layoutY="359.0" text="2770" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
