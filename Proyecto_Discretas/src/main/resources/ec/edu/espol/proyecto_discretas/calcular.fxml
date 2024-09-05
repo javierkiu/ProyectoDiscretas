@@ -35,7 +35,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="507.0" prefWidth="421.0">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="161.0" prefWidth="421.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="197.0" prefWidth="407.0">
                      <children>
                         <Label alignment="CENTER" prefHeight="45.0" prefWidth="1000.0" text="Ingrese el valor de partida y llegada:">
                            <font>
@@ -44,8 +44,8 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="42.0" prefWidth="1000.0">
                            <children>
-                              <ComboBox fx:id="cbIda" prefWidth="150.0" promptText="Partida" style="-fx-background-color: ccd0ff; -fx-border-color: #9ca4ff;" />
-                              <ComboBox fx:id="cbLlegada" prefWidth="150.0" promptText="Destino" style="-fx-border-color: #9ca4ff; -fx-background-color: ccd0ff;" />
+                              <ComboBox fx:id="cbIda" prefWidth="150.0" promptText="Partida" style="-fx-background-color: WHITE; -fx-border-color: #9ca4ff;" />
+                              <ComboBox fx:id="cbLlegada" prefWidth="150.0" promptText="Destino" style="-fx-border-color: #9ca4ff; -fx-background-color: WHITE;" />
                            </children>
                         </HBox>
                         <Button mnemonicParsing="false" onAction="#calcularRuta" prefHeight="21.0" prefWidth="127.0" style="-fx-background-color: #1f2a4f;" text="Calcular" textFill="WHITE">
@@ -53,7 +53,10 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Button>
-                        <Label fx:id="resultLabel" alignment="CENTER" prefHeight="52.0" prefWidth="548.0" />
+                        <Label fx:id="resultLabel" alignment="CENTER" prefHeight="78.0" prefWidth="387.0" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -61,7 +64,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="245.0" prefWidth="421.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="45.0" prefWidth="1000.0" text="Agregar nuevo vértice:">
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="407.0" text="Agregar nuevo vértice:">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
@@ -81,8 +84,11 @@
                               <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
                            </VBox.margin>
                         </TextField>
-                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="27.0" prefWidth="421.0" />
-                        <Button mnemonicParsing="false" onAction="#agregarGrafo" prefHeight="27.0" prefWidth="303.0" style="-fx-background-color: #1f2a4f; -fx-border-color: #1f2a4f;" text="Agregar" textFill="WHITE" />
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="24.0" prefWidth="407.0" />
+                        <Button mnemonicParsing="false" onAction="#agregarGrafo" prefHeight="27.0" prefWidth="295.0" style="-fx-background-color: #1f2a4f; -fx-border-color: #1f2a4f;" text="Agregar" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
                      </children>
                      <padding>
                         <Insets top="10.0" />

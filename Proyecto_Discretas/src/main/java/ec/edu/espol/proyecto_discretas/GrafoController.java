@@ -26,7 +26,7 @@ public class GrafoController implements Initializable {
    
     @FXML
     private void volver(MouseEvent event) throws IOException {
-        App.cambiarPantalla("primary", 1000, 600, event);
+        App.cambiarPantalla("juego", 1000, 600, event);
     }
     
 }

@@ -21,6 +21,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 /**
@@ -51,7 +53,7 @@ public class CalcularController implements Initializable {
     
     private Map<String, Circle> vertices = new HashMap<>(); // Mapa para almacenar los vértices por nombre
     private final double vertexRadius = 15; // Radio de los vértices
-    private final double spacing = 50; // Espaciado entre los vértices
+    private final double spacing = 100; // Espaciado entre los vértices
     
     /**
      * Initializes the controller class.
@@ -115,25 +117,27 @@ public class CalcularController implements Initializable {
             double y = Math.random() * (drawPane.getHeight() - 2 * vertexRadius) + vertexRadius;
 
             Circle vertex = new Circle(x, y, vertexRadius);
-            vertex.setFill(Color.LIGHTBLUE);
+            vertex.setFill(Color.KHAKI);
             Text vertexLabel = new Text(x - vertexRadius / 2, y + vertexRadius / 2, vertexName);
-
+            vertexLabel.setFont(Font.font("System", FontWeight.BOLD, 12));
             vertices.put(vertexName, vertex);
             drawPane.getChildren().addAll(vertex, vertexLabel);
         }
     }
 
     // Método para añadir una arista entre dos vértices
-    private void addEdge(String vertex1, String vertex2, double cost) {
+    private void addEdge(String vertex1, String vertex2, int cost) {
         Circle v1 = vertices.get(vertex1);
         Circle v2 = vertices.get(vertex2);
 
         if (v1 != null && v2 != null) {
-            Line edge = new Line(v1.getCenterX()+vertexRadius, v1.getCenterY(), v2.getCenterX()+vertexRadius, v2.getCenterY());
+            Line edge = new Line(v1.getCenterX(), v1.getCenterY(), v2.getCenterX(), v2.getCenterY());
             Text costLabel = new Text((v1.getCenterX() + v2.getCenterX()) / 2, (v1.getCenterY() + v2.getCenterY()) / 2, String.valueOf(cost));
             drawPane.getChildren().addAll(edge, costLabel);
         }
     }
+    
+    
     @FXML
     private void calcularRuta(ActionEvent event) {
         String partida = cbIda.getValue();
