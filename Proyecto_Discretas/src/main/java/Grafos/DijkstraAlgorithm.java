@@ -9,7 +9,7 @@ public class DijkstraAlgorithm {
         this.graph = graph;
     }
 
-    public void findShortestPath(String start, String end) {
+    public String findShortestPath(String start, String end) {
         // Obtener el vértice de inicio y fin
         Vertex<String, Integer> startVertex = graph.findVertex(start);
         Vertex<String, Integer> endVertex = graph.findVertex(end);
@@ -46,13 +46,18 @@ public class DijkstraAlgorithm {
                 }
             }
         }
+        if(Math.abs(distances.get(endVertex)) >= 2147483000){
+            return "No hay un camino entre estos dos vertices o el camino es muy largo :(";
+        }else{
+            // Imprimir el camino más corto y el costo total
+            String costo = printPath(predecessors, endVertex);
+            costo += ". Con el costo de: "+ distances.get(endVertex);
+            return costo;            
+        }
 
-        // Imprimir el camino más corto y el costo total
-        printPath(predecessors, endVertex);
-        System.out.println("Costo total: " + distances.get(endVertex));
     }
 
-    private void printPath(Map<Vertex<String, Integer>, Vertex<String, Integer>> predecessors, Vertex<String, Integer> endVertex) {
+    private String printPath(Map<Vertex<String, Integer>, Vertex<String, Integer>> predecessors, Vertex<String, Integer> endVertex) {
         Stack<Vertex<String, Integer>> path = new Stack<>();
         Vertex<String, Integer> current = endVertex;
 
@@ -61,13 +66,13 @@ public class DijkstraAlgorithm {
             current = predecessors.get(current);
         }
 
-        System.out.print("Camino más corto: ");
+        StringBuilder sb = new StringBuilder();
         while (!path.isEmpty()) {
-            System.out.print(path.pop().getContent());
+            sb.append(path.pop().getContent());
             if (!path.isEmpty()) {
-                System.out.print(" -> ");
+                sb.append(" -> ");
             }
         }
-        System.out.println();
+        return sb.toString( );
     }
 }

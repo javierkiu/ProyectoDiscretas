@@ -1,8 +1,6 @@
 package Grafos;
 
-/**
- * Profesora: Adriana Collaguazo Jaramillo
- */
+
 class Edge<E, V> { // los atributos de la clase Edge son 4
     private Vertex<V, E> source; // vértice origen, el segundo parametro V se usa para definir el origen y destino
     private Vertex<V, E> target; // vértice destino
