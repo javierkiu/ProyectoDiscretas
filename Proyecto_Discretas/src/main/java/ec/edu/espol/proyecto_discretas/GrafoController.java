@@ -17,12 +17,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -39,6 +42,12 @@ public class GrafoController implements Initializable {
     private Circle vecVEN,vecPAR,vecCO,vecECU,vecPER,vecCHI,vecAR,vecBOL,vecBRA,vecURU;
     @FXML
     private Label LVEN,LCOL,LECU,LPER,LCHI,LARG,LBOL,LPAR,LURU,LBRA;
+    @FXML
+    private ImageView imgAlg;
+    @FXML
+    private Pane panePrincipal;
+    @FXML 
+    private Rectangle recDis;
     
     /**
      * Initializes the controller class.
@@ -51,6 +60,11 @@ public class GrafoController implements Initializable {
     @FXML
     private void volver(MouseEvent event) throws IOException {
         App.cambiarPantalla("juego", 1000, 600, event);
+    }
+    
+    @FXML
+    private void reset(MouseEvent event) throws IOException {
+        App.cambiarPantalla("grafo", 1000, 600, event);
     }
     
     @FXML
@@ -68,6 +82,9 @@ public class GrafoController implements Initializable {
     
     @FXML
     private void dijkstra(MouseEvent event) throws IOException{
+        Stage stage = (Stage) lineChiArg.getScene().getWindow();
+        stage.setWidth(1300);
+        recDis.setFill(Color.web("#1f93ff00"));
         vecVEN.setFill(Color.LIGHTCORAL);LVEN.setText("[0,-]");
         vecCO.setFill(Color.LIGHTCORAL);LCOL.setText("[1023,VEN](1)");lineVenCol.setStroke(Color.RED);
         vecECU.setFill(Color.LIGHTCORAL);LECU.setText("[1757,COL](2)");lineEcuCol.setStroke(Color.RED);
