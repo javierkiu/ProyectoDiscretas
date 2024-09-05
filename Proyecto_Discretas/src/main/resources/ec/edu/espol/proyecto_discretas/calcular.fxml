@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -30,57 +31,67 @@
             </Label>
          </children>
       </HBox>
-      <VBox alignment="CENTER" prefHeight="518.0" prefWidth="1000.0">
+      <HBox prefHeight="601.0" prefWidth="1000.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="124.0" prefWidth="1000.0">
+            <VBox alignment="CENTER" prefHeight="507.0" prefWidth="421.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="1000.0" text="Agregar nuevo vértice:">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="1000.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="161.0" prefWidth="421.0">
                      <children>
-                        <TextField fx:id="valorIda" promptText="Valor de Ida" style="-fx-background-color: white; -fx-border-color: #1f2a4f;" />
-                        <TextField fx:id="valorLlegada" promptText="Valor de Llegada" style="-fx-background-color: white; -fx-border-color: #1f2a4f;" />
-                        <TextField fx:id="valorCosto" promptText="Costo (valor numérico)" style="-fx-border-color: #1f2a4f;" />
-                        <Button mnemonicParsing="false" onAction="#agregarGrafo" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #1f2a4f; -fx-border-color: #1f2a4f;" text="Agregar" textFill="WHITE" />
+                        <Label alignment="CENTER" prefHeight="45.0" prefWidth="1000.0" text="Ingrese el valor de partida y llegada:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="1000.0">
+                           <children>
+                              <ComboBox fx:id="cbIda" prefWidth="150.0" promptText="Partida" style="-fx-background-color: ccd0ff; -fx-border-color: #9ca4ff;" />
+                              <ComboBox fx:id="cbLlegada" prefWidth="150.0" promptText="Destino" style="-fx-border-color: #9ca4ff; -fx-background-color: ccd0ff;" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#calcularRuta" prefHeight="21.0" prefWidth="127.0" style="-fx-background-color: #1f2a4f;" text="Calcular" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="resultLabel" alignment="CENTER" prefHeight="52.0" prefWidth="548.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="245.0" prefWidth="421.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="45.0" prefWidth="1000.0" text="Agregar nuevo vértice:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="valorIda" promptText="Valor de Ida" style="-fx-background-color: white; -fx-border-color: #1f2a4f;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="valorLlegada" promptText="Valor de Llegada" style="-fx-background-color: white; -fx-border-color: #1f2a4f;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="valorCosto" prefHeight="27.0" prefWidth="389.0" promptText="Costo (valor numérico)" style="-fx-border-color: #1f2a4f;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="27.0" prefWidth="421.0" />
+                        <Button mnemonicParsing="false" onAction="#agregarGrafo" prefHeight="27.0" prefWidth="303.0" style="-fx-background-color: #1f2a4f; -fx-border-color: #1f2a4f;" text="Agregar" textFill="WHITE" />
                      </children>
                      <padding>
                         <Insets top="10.0" />
                      </padding>
-                  </HBox>
-                  <Label fx:id="errorLabel" alignment="CENTER" prefHeight="52.0" prefWidth="548.0" />
+                  </VBox>
                </children>
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
             </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="190.0" prefWidth="1000.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="1000.0" text="Ingrese el valor de partida y llegada:">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="1000.0">
-                     <children>
-                        <ComboBox fx:id="cbIda" prefWidth="150.0" promptText="Partida" style="-fx-background-color: ccd0ff; -fx-border-color: #9ca4ff;" />
-                        <ComboBox fx:id="cbLlegada" prefWidth="150.0" promptText="Destino" style="-fx-border-color: #9ca4ff; -fx-background-color: ccd0ff;" />
-                     </children>
-                  </HBox>
-                  <Button mnemonicParsing="false" onAction="#calcularRuta" prefHeight="21.0" prefWidth="127.0" style="-fx-background-color: #1f2a4f;" text="Calcular" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Label fx:id="resultLabel" alignment="CENTER" prefHeight="52.0" prefWidth="548.0" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </VBox>
+            <Pane fx:id="drawPane" prefHeight="507.0" prefWidth="606.0" />
          </children>
-      </VBox>
+      </HBox>
    </children>
 </VBox>
