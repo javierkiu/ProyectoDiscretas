@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.util.Duration; 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.animation.PauseTransition;
@@ -37,7 +38,7 @@ public class GrafoController implements Initializable {
     @FXML
     private Line lineVenCol,lineVenBra,lineEcuCol,lineBolPar,linePerChi,lineChiArg,lineUruArg,lineUruBra,lineColBra;
     @FXML
-    private Line lineColPer,linePerBra,linePerBol,lineChiBol,lineArgBol,lineParBra,lineArgBra,lineEcuPer,lineParArg;
+    private Line lineColPer,linePerBra,linePerBol,lineChiBol,lineArgBol,lineParBra,lineArgBra,lineEcuPer,lineParArg,lineBraBol;
     @FXML
     private Circle vecVEN,vecPAR,vecCO,vecECU,vecPER,vecCHI,vecAR,vecBOL,vecBRA,vecURU;
     @FXML
@@ -48,7 +49,25 @@ public class GrafoController implements Initializable {
     private Pane panePrincipal;
     @FXML 
     private Rectangle recDis;
-    
+    int[][] distancias = {
+            {0, 1023, 0, 0, 0, 0, 0, 0, 0, 3597},
+            {1023, 0, 734, 1885, 0, 0, 0, 0, 0, 2666},
+            {0, 734, 0, 1324, 0, 0, 0, 0, 0, 0},
+            {0, 1885, 1324, 0, 2466, 0, 1077, 0, 0, 3171},
+            {0, 0, 0, 2466, 0, 1138, 1900, 0, 0, 0},
+            {0, 0, 0, 0, 1138, 0, 2237, 1040, 202, 2340},
+            {0, 0, 0, 1077, 1900, 2237, 0, 1464, 0, 2165},
+            {0, 0, 0, 0, 0, 1040, 1464, 0, 0, 1463},
+            {0, 0, 0, 0, 0, 202, 0, 0, 0, 2770},
+            {3597, 2666, 0, 3171, 0, 2340, 2165, 1463, 2770, 0}
+        };
+    Map<String,Line> aristas = new HashMap<String,Line>(){{
+        put("01",lineVenCol);put("09",lineVenBra);put("12",lineEcuCol);put("13",lineColPer);put("19",lineColBra);
+        put("23",lineEcuPer);put("39",linePerBra);put("36",linePerBol);put("34",linePerChi);put("45",lineChiArg);
+        put("46",lineChiBol);put("59",lineArgBra);put("56",lineArgBol);put("57",lineParArg);put("58",lineUruArg);
+        put("89",lineUruBra);put("67",lineBolPar);put("79",lineParBra);put("69",lineBraBol);
+        
+    }};
     /**
      * Initializes the controller class.
      */
@@ -74,10 +93,14 @@ public class GrafoController implements Initializable {
         lineEcuCol.setStroke(Color.RED);vecECU.setFill(Color.LIGHTCORAL);
         lineEcuPer.setStroke(Color.RED);vecPER.setFill(Color.LIGHTCORAL);
         linePerBol.setStroke(Color.RED);vecBOL.setFill(Color.LIGHTCORAL);
-        lineChiBol.setStroke(Color.RED);vecCHI.setFill(Color.LIGHTCORAL);
-        lineChiArg.setStroke(Color.RED);vecAR.setFill(Color.LIGHTCORAL);
-        lineUruArg.setStroke(Color.RED);vecURU.setFill(Color.LIGHTCORAL);lineParArg.setStroke(Color.RED);vecPAR.setFill(Color.LIGHTCORAL);
+        lineBolPar.setStroke(Color.RED);vecPAR.setFill(Color.LIGHTCORAL);
         lineParBra.setStroke(Color.RED);vecBRA.setFill(Color.LIGHTCORAL);
+        lineParArg.setStroke(Color.RED);vecAR.setFill(Color.LIGHTCORAL);
+        lineChiArg.setStroke(Color.RED);vecCHI.setFill(Color.LIGHTCORAL);
+        lineUruArg.setStroke(Color.RED);vecURU.setFill(Color.LIGHTCORAL);
+        lineVenBra.setStroke(Color.LIGHTGRAY);lineBraBol.setStroke(Color.LIGHTGRAY);lineColBra.setStroke(Color.LIGHTGRAY);lineUruBra.setStroke(Color.LIGHTGRAY);
+        linePerBra.setStroke(Color.LIGHTGRAY);lineArgBra.setStroke(Color.LIGHTGRAY);lineColPer.setStroke(Color.LIGHTGRAY);linePerChi.setStroke(Color.LIGHTGRAY);
+        lineChiBol.setStroke(Color.LIGHTGRAY);lineArgBol.setStroke(Color.LIGHTGRAY);
     }
     
     @FXML
@@ -97,4 +120,22 @@ public class GrafoController implements Initializable {
         vecBRA.setFill(Color.LIGHTCORAL);LBRA.setText("[3597,VEN](1)");lineVenBra.setStroke(Color.RED);
     }
     
+    @FXML
+    private void bruteForce(MouseEvent event) throws IOException{
+        vecVEN.setFill(Color.LIGHTCORAL);vecCO.setFill(Color.LIGHTCORAL);vecECU.setFill(Color.LIGHTCORAL);vecPER.setFill(Color.LIGHTCORAL);vecBOL.setFill(Color.LIGHTCORAL);
+        vecPAR.setFill(Color.LIGHTCORAL);vecURU.setFill(Color.LIGHTCORAL);vecAR.setFill(Color.LIGHTCORAL);vecCHI.setFill(Color.LIGHTCORAL);vecBRA.setFill(Color.LIGHTCORAL);
+        BruteForceTSPAlgorithm ciclomin=new BruteForceTSPAlgorithm(distancias);
+        List<Integer> listVertices = ciclomin.hamiltonGraph();
+        List<String> conexiones = new ArrayList<>();
+        for (int i = 0; i < listVertices.size() - 1; i++) {
+            String combinacion = listVertices.get(i) + "" + listVertices.get(i + 1);
+            conexiones.add(combinacion);
+        conexiones.add(listVertices.get(listVertices.size() - 1) + "0");
+        for (String c:conexiones){
+            Line con=aristas.get(c);
+            con.setFill(Color.RED);
+        
+        }
+        }
+    }
 }

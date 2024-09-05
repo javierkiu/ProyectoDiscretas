@@ -119,7 +119,6 @@
       <Line fx:id="lineColBra" endX="270.0" endY="-110.3541259765625" layoutX="425.0" layoutY="246.0" startX="-126.0" startY="-110.3541259765625" stroke="#1f2a4f" strokeWidth="3.0" />
       <Line fx:id="lineColPer" endX="-75.5" endY="-116.70826721191406" layoutX="361.0" layoutY="265.0" startX="-164.00001525878906" startY="98.60000610351562" stroke="#1f2a4f" strokeWidth="3.0" />
       <Line fx:id="linePerBra" endX="305.0" endY="-186.8000030517578" layoutX="392.0" layoutY="330.0" startX="-190.00001525878906" startY="36.4000244140625" stroke="#1f2a4f" strokeWidth="3.0" />
-      <Line fx:id="linePerBol" endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
       <Line fx:id="lineChiBol" endX="344.39996337890625" endY="-211.00001525878906" layoutX="453.0" layoutY="452.0" startX="-157.20001220703125" startY="17.60003662109375" stroke="#1f2a4f" strokeWidth="3.0" />
       <Line fx:id="lineArgBol" endX="237.10699462890625" endY="-201.70713806152344" layoutX="561.0" layoutY="442.0" startX="-60.5" startY="114.0" stroke="#1f2a4f" strokeWidth="3.0" />
       <Line fx:id="lineParBra" endX="-10.89300537109375" endY="215.60000610351562" layoutX="810.0" layoutY="148.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
@@ -240,7 +239,7 @@
       <Circle fx:id="vecECU" fill="#1f93ff00" layoutX="187.0" layoutY="232.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
       <Circle fx:id="vecCO" fill="#1f93ff00" layoutX="285.0" layoutY="136.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
       <Circle fx:id="vecAR" fill="#1f93ff00" layoutX="501.0" layoutY="571.0" radius="9.0" stroke="#1f93ff00" strokeType="INSIDE" />
-      <ImageView fitHeight="41.0" fitWidth="173.0" layoutX="14.0" layoutY="455.0" onMouseClicked="#prim" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="41.0" fitWidth="173.0" layoutX="16.0" layoutY="473.0" onMouseClicked="#prim" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../../../img/prim.png" />
          </image>
@@ -260,7 +259,7 @@
       <Label fx:id="LARG" layoutX="537.0" layoutY="564.0" prefHeight="17.0" prefWidth="100.0" textFill="#e15050" />
       <Label fx:id="LURU" layoutX="753.0" layoutY="492.0" prefHeight="17.0" prefWidth="100.0" textFill="#e15050" />
       <Label fx:id="LPAR" layoutX="840.0" layoutY="391.0" prefHeight="17.0" prefWidth="100.0" textFill="#e15050" />
-      <ImageView fitHeight="50.0" fitWidth="205.0" layoutX="9.0" layoutY="509.0" onMouseClicked="#dijkstra" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="205.0" layoutX="12.0" layoutY="534.0" onMouseClicked="#dijkstra" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/dijkstra.png" />
          </image>
@@ -379,5 +378,11 @@
             <Rectangle fx:id="recDis" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="-33.0" layoutY="-83.0" stroke="WHITE" strokeType="INSIDE" width="399.0" />
          </children>
       </Pane>
+      <ImageView fitHeight="29.0" fitWidth="93.0" layoutX="715.0" layoutY="569.0" onMouseClicked="#reset" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/reset.png" />
+            </image>
+      </ImageView>
+      <Line fx:id="linePerBol" endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
    </children>
 </Pane>
