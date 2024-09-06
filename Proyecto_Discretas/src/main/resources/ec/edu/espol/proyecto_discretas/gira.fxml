@@ -153,7 +153,7 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="201.0" layoutY="428.0" text="1024" textFill="#1f2a4f">
+      <Label layoutX="201.0" layoutY="428.0" text="1380" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
@@ -168,7 +168,7 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="473.0" layoutY="281.0" text="1772" textFill="#1f2a4f">
+      <Label layoutX="473.0" layoutY="281.0" text="1159" textFill="#1f2a4f">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
@@ -239,7 +239,7 @@
          </font>
       </Label>
       <Line fx:id="linePerBol" endX="490.00006103515625" endY="-142.35414123535156" layoutX="301.0" layoutY="374.0" startX="-100.0" stroke="#1f2a4f" strokeWidth="3.0" />
-      <ImageView fitHeight="35.0" fitWidth="233.0" layoutX="26.0" layoutY="531.0" onMouseClicked="#nearestNeighbor" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="233.0" layoutX="14.0" layoutY="506.0" onMouseClicked="#nearestNeighbor" pickOnBounds="true" preserveRatio="true">
           <image>
                 <Image url="@../../../../img/near.png" />
             </image>
@@ -257,6 +257,11 @@
       <ImageView fitHeight="130.0" fitWidth="172.0" layoutX="797.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../../../img/cantante.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="185.0" layoutX="36.0" layoutY="555.0" onMouseClicked="#bruteForce" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/force.png" />
          </image>
       </ImageView>
    </children>

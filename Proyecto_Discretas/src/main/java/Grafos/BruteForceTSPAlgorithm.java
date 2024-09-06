@@ -41,7 +41,8 @@ public class BruteForceTSPAlgorithm {
             for (int i = start; i < lista.size(); i++) {
                 swap(lista, start, i);
                 generarPermutaciones(lista, start + 1, result);
-                swap(lista, start, i); // backtrack
+                swap(lista, start, i); 
+                //System.out.println(lista);
             }
         }
     }

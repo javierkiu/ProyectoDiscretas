@@ -60,4 +60,10 @@ public class App extends Application {
         popupStage.initOwner(mainStage);
         popupStage.show();
     }
+    
+    public static void actualizarEscena(String fxml) throws IOException {
+        Parent root = loadFXML(fxml);
+        Scene currentScene = scene;
+        currentScene.setRoot(root);
+    }
 }
