@@ -34,7 +34,7 @@ public class JuegoController implements Initializable {
     
     @FXML
     private void gira(MouseEvent event) throws IOException {
-        App.cambiarPantalla("gira", 1000, 600, event);
+        App.cambiarPantalla("cantante", 1000, 600, event);
     }
     
 }

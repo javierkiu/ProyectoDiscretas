@@ -32,17 +32,17 @@
             <Image url="@../../../../img/desafio.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="106.0" fitWidth="444.0" layoutX="528.0" layoutY="222.0" onMouseClicked="#gira" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="106.0" fitWidth="444.0" onMouseClicked="#gira"  layoutX="528.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../../../img/gira.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="groupN" fitHeight="190.0" fitWidth="233.0" layoutX="147.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="groupN" fitHeight="190.0" fitWidth="233.0" onMouseClicked="#nomada"  layoutX="147.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../../../img/group1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="cantante" fitHeight="190.0" fitWidth="233.0" layoutX="633.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="cantante" fitHeight="190.0" onMouseClicked="#gira"  fitWidth="233.0" layoutX="633.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../../../img/cantante.png" />
          </image>

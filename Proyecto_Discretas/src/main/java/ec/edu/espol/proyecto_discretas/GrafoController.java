@@ -51,8 +51,6 @@ public class GrafoController implements Initializable {
     @FXML
     private Label LVEN,LCOL,LECU,LPER,LCHI,LARG,LBOL,LPAR,LURU,LBRA;
     @FXML
-    private ImageView imgAlg;
-    @FXML
     private Pane paneGrafo;
     @FXML
     private Pane panePrincipal;
@@ -72,13 +70,6 @@ public class GrafoController implements Initializable {
             {0, 0, 0, 0, 0, 202, 0, 0, 0, 2770},
             {3597, 2666, 0, 3171, 0, 2340, 2165, 1463, 2770, 0}
         };
-    Map<String,Line> aristas = new HashMap<String,Line>(){{
-        put("01",lineVenCol);put("09",lineVenBra);put("12",lineEcuCol);put("13",lineColPer);put("19",lineColBra);
-        put("23",lineEcuPer);put("39",linePerBra);put("36",linePerBol);put("34",linePerChi);put("45",lineChiArg);
-        put("46",lineChiBol);put("59",lineArgBra);put("56",lineArgBol);put("57",lineParArg);put("58",lineUruArg);
-        put("89",lineUruBra);put("67",lineBolPar);put("79",lineParBra);put("69",lineBraBol);
-        
-    }};
     /**
      * Initializes the controller class.
      */
@@ -144,16 +135,6 @@ public class GrafoController implements Initializable {
         Text parText = new Text(par.getCenterX() - 10, par.getCenterY() - 25, "PAR");
         Text argText = new Text(arg.getCenterX() - 10, arg.getCenterY() - 25, "ARG");
         Text uruText = new Text(uru.getCenterX() - 10, uru.getCenterY() - 25, "URU");
-        String rutaImagen = "/img/flag.png";
-        Image flag = new Image(getClass().getResourceAsStream(rutaImagen));
-        //Image flag = new Image("f:src/main/resources/img/flag.png");
-        ImageView imageV1 = new ImageView(flag);imageV1.setLayoutX(bog.getCenterX()+20);imageV1.setLayoutY(bog.getCenterY());
-        ImageView imageV2 = new ImageView(flag);imageV2.setLayoutX(ecu.getCenterX()+20);imageV2.setLayoutY(ecu.getCenterY());
-        ImageView imageV3 = new ImageView(flag);imageV3.setLayoutX(per.getCenterX()+20);imageV3.setLayoutY(per.getCenterY());        
-        ImageView imageV4 = new ImageView(flag);imageV4.setLayoutX(bol.getCenterX()+20);imageV4.setLayoutY(bol.getCenterY());        
-        ImageView imageV5 = new ImageView(flag);imageV5.setLayoutX(par.getCenterX()+20);imageV5.setLayoutY(par.getCenterY());       
-        ImageView imageV6 = new ImageView(flag);imageV6.setLayoutX(arg.getCenterX()+20);imageV6.setLayoutY(arg.getCenterY());      
-        ImageView imageV7 = new ImageView(flag);imageV7.setLayoutX(uru.getCenterX()+20);imageV7.setLayoutY(uru.getCenterY());
         PrimAlgorithm minD = new PrimAlgorithm(distancias);
         minD.construirMST(0);
         String mensaje="La distancia recorrida fue de: "+String.valueOf(minD.calcularCaminoEnMST(0, 8)+" km");
@@ -223,28 +204,9 @@ public class GrafoController implements Initializable {
         Text distMin = new Text(uru.getCenterX() - 300, uru.getCenterY() + 40, mensaje);
         paneGrafo.getChildren().addAll(ven, bog, bra, ecu, per, chi, bol, par, arg, uru);
         paneGrafo.getChildren().addAll(venBog, venBra, bogEcu, bogPer, perChi, perBol, braPar, braArg, argUru);
-        paneGrafo.getChildren().addAll(venText, bogText, braText, ecuText, perText, chiText, bolText, parText, argText, uruText,distMin);
-        
+        paneGrafo.getChildren().addAll(venText, bogText, braText, ecuText, perText, chiText, bolText, parText, argText, uruText,distMin);    
         if(!(panePrincipal.getChildren().contains(recG2) || panePrincipal.getChildren().contains(recG1))){
             App.mostrarPopup("ganador",event);
-        }
-    }
-    
-    @FXML
-    private void bruteForce(MouseEvent event) throws IOException{
-        vecVEN.setFill(Color.LIGHTCORAL);vecCO.setFill(Color.LIGHTCORAL);vecECU.setFill(Color.LIGHTCORAL);vecPER.setFill(Color.LIGHTCORAL);vecBOL.setFill(Color.LIGHTCORAL);
-        vecPAR.setFill(Color.LIGHTCORAL);vecURU.setFill(Color.LIGHTCORAL);vecAR.setFill(Color.LIGHTCORAL);vecCHI.setFill(Color.LIGHTCORAL);vecBRA.setFill(Color.LIGHTCORAL);
-        BruteForceTSPAlgorithm ciclomin=new BruteForceTSPAlgorithm(distancias);
-        List<Integer> listVertices = ciclomin.hamiltonGraph();
-        List<String> conexiones = new ArrayList<>();
-        for (int i = 0; i < listVertices.size() - 1; i++) {
-            String combinacion = listVertices.get(i) + "" + listVertices.get(i + 1);
-            conexiones.add(combinacion);
-        conexiones.add(listVertices.get(listVertices.size() - 1) + "0");
-        for (String c:conexiones){
-            Line con=aristas.get(c);
-            con.setFill(Color.RED);
-        }
         }
     }
 }

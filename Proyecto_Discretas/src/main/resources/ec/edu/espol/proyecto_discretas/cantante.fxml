@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.NomadaController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyecto_discretas.CantanteController">
    <children>
       <Pane prefHeight="134.0" prefWidth="1000.0" style="-fx-background-color: #1f2a4f;">
          <children>
@@ -18,7 +18,7 @@
                   <Image url="@../../../../img/retroceder.png" />
                </image>
             </ImageView>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="330.0" layoutY="14.0" text="Ruta Andina: Desafío Nómada" textFill="WHITE">
+            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="330.0" layoutY="14.0" text="Gira Sudamericana: Andrea Bocelli" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -65,31 +65,16 @@
                    <Image url="@../../../../img/texto.png" />
                </image>
             </ImageView>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="608.0" layoutY="23.0" text="La carrera empieza en Caracas - Venezuela" textFill="#1f2a4f">
+            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="608.0" layoutY="23.0" text="La gira empieza en Caracas - Venezuela" textFill="#1f2a4f">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="56.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="246.0" fitWidth="322.0" layoutX="14.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                   <Image url="@../../../../img/group1.png" />
+                   <Image url="@../../../../img/cantante.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                   <Image url="@../../../../img/group2.png" />
-               </image>
-            </ImageView>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="63.0" layoutY="101.0" text="Group Big O" textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="62.0" layoutY="303.0" text="Group Big Ω " textFill="#1f2a4f">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
             <ImageView fx:id="flecha" fitHeight="111.0" fitWidth="150.0" layoutX="715.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                   <Image url="@../../../../img/flecha.gif" />

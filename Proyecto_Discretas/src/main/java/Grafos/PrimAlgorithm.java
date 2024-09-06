@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
-
+/**
+ *
+ * @author Steven Mirabá
+ */
 public class PrimAlgorithm {
     private int[][] distancias;
     private List<int[]>[] mst;  // Lista de adyacencia para almacenar el MST
