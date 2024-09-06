@@ -24,7 +24,7 @@ public class JuegoController implements Initializable {
 
     @FXML
     private void volver(MouseEvent event) throws IOException {
-        App.cambiarPantalla("juego", 1000, 600, event);
+        App.cambiarPantalla("primary", 1000, 600, event);
     }
     
     @FXML
