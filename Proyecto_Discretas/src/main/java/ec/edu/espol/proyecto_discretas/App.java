@@ -50,4 +50,14 @@ public class App extends Application {
         stage.close();
         return newScreen;
     }
+    public static void mostrarPopup(String fxml, Event event) throws IOException {
+        Parent popupRoot = loadFXML(fxml);
+        Stage popupStage = new Stage();
+        popupStage.setTitle("Ganador");
+        Scene popupScene = new Scene(popupRoot);
+        popupStage.setScene(popupScene);
+        Stage mainStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        popupStage.initOwner(mainStage);
+        popupStage.show();
+    }
 }

@@ -15,7 +15,11 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -28,6 +32,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -88,11 +93,6 @@ public class GrafoController implements Initializable {
     }
     
     @FXML
-    private void reset(MouseEvent event) throws IOException {
-        App.cambiarPantalla("grafo", 1000, 600, event);
-    }
-    
-    @FXML
     private void prim(MouseEvent event) throws IOException {
         Stage stage = (Stage) lineChiArg.getScene().getWindow();
         stage.setWidth(1300);
@@ -144,14 +144,16 @@ public class GrafoController implements Initializable {
         Text parText = new Text(par.getCenterX() - 10, par.getCenterY() - 25, "PAR");
         Text argText = new Text(arg.getCenterX() - 10, arg.getCenterY() - 25, "ARG");
         Text uruText = new Text(uru.getCenterX() - 10, uru.getCenterY() - 25, "URU");
-        /*Image flag = new Image("f:src/main/resources/img/flag.png");
+        String rutaImagen = "/img/flag.png";
+        Image flag = new Image(getClass().getResourceAsStream(rutaImagen));
+        //Image flag = new Image("f:src/main/resources/img/flag.png");
         ImageView imageV1 = new ImageView(flag);imageV1.setLayoutX(bog.getCenterX()+20);imageV1.setLayoutY(bog.getCenterY());
         ImageView imageV2 = new ImageView(flag);imageV2.setLayoutX(ecu.getCenterX()+20);imageV2.setLayoutY(ecu.getCenterY());
         ImageView imageV3 = new ImageView(flag);imageV3.setLayoutX(per.getCenterX()+20);imageV3.setLayoutY(per.getCenterY());        
         ImageView imageV4 = new ImageView(flag);imageV4.setLayoutX(bol.getCenterX()+20);imageV4.setLayoutY(bol.getCenterY());        
         ImageView imageV5 = new ImageView(flag);imageV5.setLayoutX(par.getCenterX()+20);imageV5.setLayoutY(par.getCenterY());       
         ImageView imageV6 = new ImageView(flag);imageV6.setLayoutX(arg.getCenterX()+20);imageV6.setLayoutY(arg.getCenterY());      
-        ImageView imageV7 = new ImageView(flag);imageV7.setLayoutX(uru.getCenterX()+20);imageV7.setLayoutY(uru.getCenterY());*/
+        ImageView imageV7 = new ImageView(flag);imageV7.setLayoutX(uru.getCenterX()+20);imageV7.setLayoutY(uru.getCenterY());
         PrimAlgorithm minD = new PrimAlgorithm(distancias);
         minD.construirMST(0);
         String mensaje="La distancia recorrida fue de: "+String.valueOf(minD.calcularCaminoEnMST(0, 8)+" km");
@@ -160,6 +162,9 @@ public class GrafoController implements Initializable {
         paneGrafo.getChildren().addAll(venBog, venBra, bogEcu, bogPer, perChi, perBol, braPar, braArg, argUru);
         paneGrafo.getChildren().addAll(venText, bogText, braText, ecuText, perText, chiText, bolText, parText, argText, uruText,distMin);
         //paneGrafo.getChildren().addAll(imageV1, imageV2, imageV3, imageV4, imageV5, imageV6, imageV7);
+        if(!(panePrincipal.getChildren().contains(recG2) || panePrincipal.getChildren().contains(recG1))){
+            App.mostrarPopup("ganador",event);
+        }
     }
     
     @FXML
@@ -219,6 +224,10 @@ public class GrafoController implements Initializable {
         paneGrafo.getChildren().addAll(ven, bog, bra, ecu, per, chi, bol, par, arg, uru);
         paneGrafo.getChildren().addAll(venBog, venBra, bogEcu, bogPer, perChi, perBol, braPar, braArg, argUru);
         paneGrafo.getChildren().addAll(venText, bogText, braText, ecuText, perText, chiText, bolText, parText, argText, uruText,distMin);
+        
+        if(!(panePrincipal.getChildren().contains(recG2) || panePrincipal.getChildren().contains(recG1))){
+            App.mostrarPopup("ganador",event);
+        }
     }
     
     @FXML
@@ -235,7 +244,6 @@ public class GrafoController implements Initializable {
         for (String c:conexiones){
             Line con=aristas.get(c);
             con.setFill(Color.RED);
-        
         }
         }
     }
