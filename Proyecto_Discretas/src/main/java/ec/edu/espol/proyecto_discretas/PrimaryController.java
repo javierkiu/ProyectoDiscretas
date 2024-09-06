@@ -52,8 +52,6 @@ public class PrimaryController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        opcionEcuaciones.setOnMouseEntered(event -> buttonEcuaciones.setStyle("-fx-background-color:  #1f2a4f; -fx-text-fill: white;"));
-        opcionEcuaciones.setOnMouseExited(event -> buttonEcuaciones.setStyle("-fx-background-color: white;-fx-text-fill: black;"));
         opcionjuego.setOnMouseEntered(event -> buttonJuego.setStyle("-fx-background-color:  #1f2a4f; -fx-text-fill: white;"));
         opcionjuego.setOnMouseExited(event -> buttonJuego.setStyle("-fx-background-color: white;-fx-text-fill: black;"));        
         opcionCalcular.setOnMouseEntered(event -> buttonCalcular.setStyle("-fx-background-color:  #1f2a4f; -fx-text-fill: white;"));
@@ -61,12 +59,6 @@ public class PrimaryController implements Initializable {
 
     }    
     
-    @FXML
-    private void goToEcuaciones(MouseEvent event) throws IOException {
-        App.cambiarPantalla("ecuaciones", 1000, 600,event);
-  
-    }
-
 
     @FXML
     private void goToGame(MouseEvent event) throws IOException {
