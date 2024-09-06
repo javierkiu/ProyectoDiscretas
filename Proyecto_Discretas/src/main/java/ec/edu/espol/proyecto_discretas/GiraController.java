@@ -92,7 +92,6 @@ public class GiraController implements Initializable {
         vecCHI.setFill(Color.LIGHTCORAL);vecBRA.setFill(Color.LIGHTCORAL);
         BruteForceTSPAlgorithm bruteForc = new BruteForceTSPAlgorithm(costos);
         List<Integer> listVertices = bruteForc.hamiltonGraph();
-        //listVertices.add(0);
         System.out.println(listVertices);
         String ordenV = "orden:    VEN -> COL -> ECU -> PER -> CHI -> BOL -> PAR -> ARG -> URU -> BRA";
         Integer costoTotal = bruteForc.calcularPeso(listVertices);
