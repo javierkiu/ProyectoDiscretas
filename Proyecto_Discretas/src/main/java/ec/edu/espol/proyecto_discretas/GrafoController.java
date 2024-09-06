@@ -209,4 +209,23 @@ public class GrafoController implements Initializable {
             App.mostrarPopup("ganador",event);
         }
     }
+    
+    @FXML
+    private void bruteForce(MouseEvent event) throws IOException{
+        vecVEN.setFill(Color.LIGHTCORAL);vecCO.setFill(Color.LIGHTCORAL);vecECU.setFill(Color.LIGHTCORAL);vecPER.setFill(Color.LIGHTCORAL);vecBOL.setFill(Color.LIGHTCORAL);
+        vecPAR.setFill(Color.LIGHTCORAL);vecURU.setFill(Color.LIGHTCORAL);vecAR.setFill(Color.LIGHTCORAL);vecCHI.setFill(Color.LIGHTCORAL);vecBRA.setFill(Color.LIGHTCORAL);
+        BruteForceTSPAlgorithm ciclomin=new BruteForceTSPAlgorithm(distancias);
+        List<Integer> listVertices = ciclomin.hamiltonGraph();
+        System.out.println(listVertices);
+        String ordenV = "orden:    VEN -> COL -> ECU -> PER -> CHI -> BOL -> PAR -> ARG -> URU -> BRA";
+        Integer distanciaTotal = ciclomin.calcularPeso(listVertices);
+        String mensaje = "El costo total es: $"+String.valueOf(distanciaTotal);
+        lineVenCol.setStroke(Color.RED);lineEcuCol.setStroke(Color.RED);lineEcuPer.setStroke(Color.RED);linePerChi.setStroke(Color.RED);
+        lineChiBol.setStroke(Color.RED);lineBolPar.setStroke(Color.RED);lineParArg.setStroke(Color.RED);lineUruArg.setStroke(Color.RED);
+        lineUruBra.setStroke(Color.RED);lineVenBra.setStroke(Color.RED);
+        lineColPer.setStroke(Color.web("#B3B3B3"));lineColBra.setStroke(Color.web("#B3B3B3"));lineBraBol.setStroke(Color.web("#B3B3B3"));
+        linePerBra.setStroke(Color.web("#B3B3B3"));linePerBol.setStroke(Color.web("#B3B3B3"));lineChiArg.setStroke(Color.web("#B3B3B3"));
+        lineArgBra.setStroke(Color.web("#B3B3B3"));lineArgBol.setStroke(Color.web("#B3B3B3"));lineParBra.setStroke(Color.web("#B3B3B3"));
+    }
+    
 }
