@@ -273,7 +273,7 @@
         </ImageView>
       <ImageView fitHeight="43.0" fitWidth="77.0" layoutX="46.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
           <image>
-                <Image url="@../../../../img/140.png" />
+                <Image url="@../../../../img/70.png" />
             </image>
         </ImageView>
       <ImageView fitHeight="89.0" fitWidth="100.0" layoutX="14.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
@@ -288,7 +288,7 @@
         </ImageView>
       <ImageView fitHeight="43.0" fitWidth="77.0" layoutX="44.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
           <image>
-                <Image url="@../../../../img/110.png" />
+                <Image url="@../../../../img/80.png" />
             </image>
         </ImageView>
       <Label layoutX="53.0" layoutY="202.0" text="6864 km" textFill="#1f2a4f">

@@ -92,7 +92,7 @@ public class GrafoController implements Initializable {
             panePrincipal.getChildren().remove(recG1);
         }    
         LCOL.setText("");LVEN.setText("");LECU.setText("");LPER.setText("");LCHI.setText("");LARG.setText("");
-        LBOL.setText("");LARG.setText("");LPAR.setText("");LURU.setText("");
+        LBOL.setText("");LBRA.setText("");LPAR.setText("");LURU.setText("");
         vecVEN.setFill(Color.LIGHTCORAL);
         lineVenCol.setStroke(Color.RED);vecCO.setFill(Color.LIGHTCORAL);
         lineEcuCol.setStroke(Color.RED);vecECU.setFill(Color.LIGHTCORAL);
@@ -201,7 +201,7 @@ public class GrafoController implements Initializable {
         DijkstraAlgorithm minD = new DijkstraAlgorithm(distancias);
         minD.construirArbol(0);
         String mensaje="La distancia recorrida fue de: "+String.valueOf(minD.calcularSumaDePesos(0,8)+" km");
-        Text distMin = new Text(uru.getCenterX() - 300, uru.getCenterY() + 40, mensaje);
+        Text distMin = new Text(uru.getCenterX() - 250, uru.getCenterY() + 50, mensaje);
         paneGrafo.getChildren().addAll(ven, bog, bra, ecu, per, chi, bol, par, arg, uru);
         paneGrafo.getChildren().addAll(venBog, venBra, bogEcu, bogPer, perChi, perBol, braPar, braArg, argUru);
         paneGrafo.getChildren().addAll(venText, bogText, braText, ecuText, perText, chiText, bolText, parText, argText, uruText,distMin);    

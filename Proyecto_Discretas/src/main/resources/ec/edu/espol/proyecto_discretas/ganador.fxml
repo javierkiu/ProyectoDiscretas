@@ -13,7 +13,7 @@
         </ImageView>
       <ImageView fitHeight="270.0" fitWidth="344.0" layoutX="99.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
           <image>
-                <Image url="@../../../../img/group1.png" />
+                <Image url="@../../../../img/group2.png" />
             </image>
         </ImageView>
       <ImageView fitHeight="71.0" fitWidth="365.0" layoutX="71.0" pickOnBounds="true" preserveRatio="true">
